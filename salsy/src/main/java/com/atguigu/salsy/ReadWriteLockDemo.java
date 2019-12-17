@@ -24,7 +24,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
     }
 
     public void get(String key){
-        rwl.ReadLock().lock();
+        rwl.readLock().lock();
                   try {
                       System.out.println(Thread.currentThread().getName()+"\t 开始读");
                       String result = map.get(key);
@@ -33,7 +33,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
                   } catch (Exception e) {
                       e.printStackTrace();
                   }finally {
-                      rwl.ReadLock().lock();
+                      rwl.readLock().lock();
                   }
 
     }
