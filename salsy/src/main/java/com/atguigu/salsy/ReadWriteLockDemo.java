@@ -52,7 +52,7 @@ public class ReadWriteLockDemo {
         for (int i = 1; i <=10; i++) {
             final int tempI = i;
             new Thread(()->{
-                myCache.get(tempI+"");
+                myCache.get(tempI+"11111111");
             },String.valueOf(i)).start();
         }
     }
